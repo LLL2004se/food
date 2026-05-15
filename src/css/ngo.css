@@ -1,0 +1,2399 @@
+/* NGO Pages Styling */
+
+.ngo-page {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: var(--bg-secondary, #f9f9f9);
+  min-height: calc(100vh - 200px);
+}
+
+.ngo-pickups {
+  padding-top: 5.25rem;
+}
+
+.ngo-page h1 {
+  font-size: 1.6rem;
+  color: var(--text-primary, #333);
+  margin-bottom: 0.25rem;
+  border-bottom: none;
+  padding-bottom: 0;
+  font-weight: 600;
+}
+
+.ngo-page h2 {
+  font-size: 1.2rem;
+  color: var(--text-primary, #333);
+  margin-top: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.page-subtitle {
+  color: var(--text-secondary, #666);
+  font-size: 0.9rem;
+  margin: 0 0 1.25rem 0;
+}
+
+/* Dashboard Styling */
+.ngo-dashboard .dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card h3 {
+  font-size: 0.78rem;
+  color: var(--text-secondary, #666);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-number {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--primary-color, #2ecc71);
+}
+
+/* Donations / Pickups / Volunteers Lists */
+.donations-list,
+.pickups-list,
+.volunteers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.donation-card,
+.pickup-card,
+.volunteer-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.1rem 1.25rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  border-left: 3px solid var(--primary-color, #2ecc71);
+  transition: box-shadow 0.2s;
+}
+
+.donation-card:hover,
+.pickup-card:hover,
+.volunteer-card:hover {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.donation-header,
+.pickup-header,
+.volunteer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.donation-header h3,
+.pickup-header h3,
+.volunteer-header h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--text-primary, #333);
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  border-radius: 20px;
+  font-size: 0.73rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.status-badge.status-pending {
+  background-color: #fff3e0;
+  color: #e65100;
+}
+
+.status-badge.status-assigned {
+  background-color: #e3f2fd;
+  color: #1565c0;
+}
+
+.status-badge.status-scheduled {
+  background-color: #f3e5f5;
+  color: #6a1b9a;
+}
+
+.status-badge.status-picked {
+  background-color: #e1f5fe;
+  color: #0277bd;
+}
+
+.status-badge.status-delivered {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.approval-badge {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  border-radius: 20px;
+  font-size: 0.73rem;
+  font-weight: 600;
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.approval-badge.status-pending {
+  background-color: #fff3e0;
+  color: #e65100;
+}
+
+.donation-details,
+.pickup-details,
+.volunteer-details {
+  margin-bottom: 0.6rem;
+}
+
+.donation-details p,
+.pickup-details p,
+.volunteer-details p {
+  margin: 0.25rem 0;
+  color: var(--text-secondary, #666);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.donation-details strong,
+.pickup-details strong,
+.volunteer-details strong {
+  color: var(--text-primary, #333);
+  font-weight: 600;
+  font-size: 0.82rem;
+}
+
+.donor-info,
+.volunteer-actions {
+  margin-top: 0.6rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+.donation-actions,
+.pickup-actions,
+.volunteer-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-accept,
+.btn-reject,
+.btn-secondary,
+.btn-edit,
+.btn-save,
+.btn-cancel {
+  padding: 0.4rem 0.9rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-block;
+}
+
+.btn-primary {
+  background-color: var(--primary-color, #2ecc71);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #27ae60;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.btn-accept {
+  background-color: #2ecc71;
+  color: white;
+  flex: 1;
+}
+
+.btn-accept:hover {
+  background-color: #27ae60;
+}
+
+.btn-reject {
+  background-color: #e74c3c;
+  color: white;
+  flex: 1;
+}
+
+.btn-reject:hover {
+  background-color: #c0392b;
+}
+
+.btn-secondary {
+  background-color: #3498db;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #2980b9;
+}
+
+.btn-edit {
+  background-color: #3498db;
+  color: white;
+}
+
+.btn-edit:hover {
+  background-color: #2980b9;
+}
+
+.btn-save {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.btn-save:hover {
+  background-color: #27ae60;
+}
+
+.btn-cancel {
+  background-color: #95a5a6;
+  color: white;
+}
+
+.btn-cancel:hover {
+  background-color: #7f8c8d;
+}
+
+.btn-disabled {
+  background-color: #bdc3c7;
+  color: white;
+  padding: 0.4rem 0.9rem;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  display: inline-block;
+}
+
+.btn-track {
+  background-color: #9b59b6;
+  color: white;
+  padding: 0.4rem 0.9rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-track:hover {
+  background-color: #8e44ad;
+  transform: translateY(-1px);
+}
+
+.no-data {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  color: var(--text-secondary, #666);
+  font-size: 0.95rem;
+}
+
+.error-message {
+  background-color: #ffebee;
+  color: #c62828;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border-left: 3px solid #c62828;
+  font-size: 0.88rem;
+}
+
+/* Filter Controls */
+.filter-controls,
+.date-range-selector {
+  background: white;
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.filter-controls label,
+.date-range-selector label {
+  font-weight: 500;
+  color: var(--text-primary, #333);
+  font-size: 0.85rem;
+}
+
+.filter-controls select,
+.date-range-selector select {
+  padding: 0.4rem 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  background-color: white;
+  transition: border-color 0.2s;
+}
+
+.filter-controls select:focus,
+.date-range-selector select:focus {
+  outline: none;
+  border-color: #27ae60;
+}
+
+/* Pickup Timeline */
+.pickup-timeline {
+  margin-top: 0.6rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+.pickup-timeline h4 {
+  font-size: 0.82rem;
+  color: var(--text-secondary, #888);
+  margin: 0 0 0.4rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.timeline-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.timeline-entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.3rem 0;
+  font-size: 0.8rem;
+  border-bottom: 1px dashed #f0f0f0;
+}
+
+.timeline-entry:last-child {
+  border-bottom: none;
+}
+
+.timeline-status {
+  font-weight: 600;
+  color: var(--text-primary, #333);
+  text-transform: capitalize;
+}
+
+.timeline-time {
+  color: var(--text-secondary, #999);
+  font-size: 0.75rem;
+}
+
+/* Donation History Page */
+.ngo-history-page {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: calc(100vh - 200px);
+}
+
+.history-header h1 {
+  font-size: 2rem;
+  color: var(--text-primary, #333);
+  margin-bottom: 0.25rem;
+}
+
+.history-header .subtitle {
+  color: var(--text-secondary, #666);
+  margin-bottom: 1.5rem;
+}
+
+/* Summary Bar */
+.history-summary-bar {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.hsb-item {
+  background: white;
+  border-radius: 10px;
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  min-width: 90px;
+  border-top: 3px solid #95a5a6;
+}
+
+.hsb-item.pending { border-top-color: #f39c12; }
+.hsb-item.assigned { border-top-color: #3498db; }
+.hsb-item.completed { border-top-color: #27ae60; }
+.hsb-item.meals { border-top-color: #e91e63; }
+
+.hsb-num {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary, #222);
+}
+
+.hsb-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary, #888);
+}
+
+/* Toolbar */
+.history-toolbar {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.history-search {
+  flex: 1;
+  min-width: 200px;
+}
+
+.history-search-input {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.history-search-input:focus {
+  border-color: #27ae60;
+}
+
+.history-filters {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Table */
+.history-table-wrapper {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  overflow-x: auto;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.history-table thead {
+  background: #f8f9fa;
+}
+
+.history-table th {
+  padding: 0.85rem 1rem;
+  text-align: left;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #666;
+  font-weight: 600;
+  border-bottom: 2px solid #eee;
+}
+
+.history-table td {
+  padding: 0.85rem 1rem;
+  font-size: 0.88rem;
+  color: var(--text-primary, #333);
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.history-row:hover {
+  background: #f8fdf9;
+}
+
+.history-row.completed {
+  background: #fcfff9;
+}
+
+.food-cell {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.food-emoji {
+  margin-right: 0.4rem;
+}
+
+.qty-cell {
+  font-weight: 600;
+  text-align: center;
+}
+
+.addr-cell {
+  max-width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.date-cell {
+  font-size: 0.8rem;
+  color: #888;
+  white-space: nowrap;
+}
+
+.history-status-badge {
+  padding: 0.25rem 0.65rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .history-summary-bar {
+    justify-content: center;
+  }
+  .history-toolbar {
+    flex-direction: column;
+  }
+  .ngo-history-page {
+    padding: 1rem;
+  }
+}
+
+/* Profile Styling */
+.ngo-profile-page {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.ngo-profile-hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem 1.75rem;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(46, 204, 113, 0.12), rgba(17, 24, 39, 0.04));
+  border: 1px solid rgba(46, 204, 113, 0.14);
+}
+
+.ngo-profile-hero-main {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.ngo-profile-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid rgba(46, 204, 113, 0.18);
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+.ngo-profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ngo-profile-avatar span {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--primary-color, #2ecc71);
+}
+
+.ngo-profile-eyebrow {
+  margin: 0 0 0.35rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.72rem;
+  color: var(--text-secondary, #666);
+}
+
+.ngo-profile-hero h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: var(--text-primary, #1f2937);
+}
+
+.ngo-profile-subtitle {
+  margin: 0.65rem 0 0;
+  max-width: 720px;
+  color: var(--text-secondary, #666);
+  line-height: 1.7;
+}
+
+.ngo-profile-hero-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.ngo-profile-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+
+.ngo-profile-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.8);
+  color: var(--text-primary, #1f2937);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.ngo-status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.ngo-status-active {
+  background: linear-gradient(135deg, #059669, #10b981);
+}
+
+.ngo-status-pending {
+  background: linear-gradient(135deg, #d97706, #f59e0b);
+}
+
+.ngo-status-rejected {
+  background: linear-gradient(135deg, #dc2626, #ef4444);
+}
+
+.ngo-profile-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.25rem;
+}
+
+.ngo-profile-view-grid,
+.ngo-profile-edit-form {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.ngo-profile-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 1.4rem;
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
+}
+
+.ngo-profile-card-wide {
+  grid-column: 1 / -1;
+}
+
+.ngo-profile-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.ngo-profile-card-label {
+  margin: 0 0 0.25rem;
+  color: var(--primary-color, #2ecc71);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.ngo-profile-card h2 {
+  margin: 0;
+  color: var(--text-primary, #1f2937);
+  font-size: 1.15rem;
+}
+
+.ngo-profile-field-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.ngo-profile-field {
+  min-width: 0;
+}
+
+.ngo-profile-field-full {
+  grid-column: 1 / -1;
+}
+
+.ngo-profile-field label {
+  display: block;
+  margin-bottom: 0.45rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--text-primary, #1f2937);
+}
+
+.ngo-profile-field p {
+  margin: 0;
+  color: var(--text-secondary, #5b6472);
+  line-height: 1.7;
+}
+
+.ngo-profile-field a {
+  color: var(--primary-color, #2ecc71);
+  text-decoration: none;
+}
+
+.ngo-profile-field a:hover {
+  text-decoration: underline;
+}
+
+.ngo-profile-field input,
+.ngo-profile-field textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  border: 1px solid #d6dbe3;
+  background: #fff;
+  color: var(--text-primary, #1f2937);
+  font: inherit;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.ngo-profile-field input:focus,
+.ngo-profile-field textarea:focus {
+  outline: none;
+  border-color: var(--primary-color, #2ecc71);
+  box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.12);
+}
+
+.ngo-profile-field input:disabled {
+  background: #f3f4f6;
+  color: #7c8596;
+}
+
+.ngo-service-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.ngo-service-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(46, 204, 113, 0.1);
+  color: var(--primary-color, #2ecc71);
+  border: 1px solid rgba(46, 204, 113, 0.14);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.ngo-empty-text,
+.ngo-field-help {
+  margin: 0;
+  color: var(--text-secondary, #6b7280);
+  line-height: 1.6;
+}
+
+.ngo-field-help {
+  margin-top: 0.45rem;
+  font-size: 0.82rem;
+}
+
+.ngo-profile-actions {
+  justify-content: flex-end;
+}
+
+.ngo-profile-actions button {
+  min-width: 160px;
+}
+
+@media (max-width: 980px) {
+  .ngo-profile-hero,
+  .ngo-profile-hero-meta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ngo-profile-chip-row {
+    justify-content: flex-start;
+  }
+
+  .ngo-profile-field-grid,
+  .ngo-profile-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.profile-container {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #eee;
+}
+
+.profile-status {
+  display: flex;
+  gap: 1rem;
+}
+
+.profile-view,
+.profile-edit-form {
+  display: grid;
+  gap: 2rem;
+}
+
+.profile-section {
+  padding: 1.5rem;
+  background: #f9f9f9;
+  border-radius: 4px;
+}
+
+.profile-section h2 {
+  margin-top: 0;
+  color: var(--primary-color, #2ecc71);
+  border-bottom: 2px solid var(--primary-color, #2ecc71);
+  padding-bottom: 0.5rem;
+}
+
+.profile-field {
+  margin-bottom: 1.5rem;
+}
+
+.profile-field:last-child {
+  margin-bottom: 0;
+}
+
+.profile-field label {
+  display: block;
+  font-weight: 600;
+  color: var(--text-primary, #333);
+  margin-bottom: 0.5rem;
+}
+
+.profile-field p {
+  margin: 0;
+  color: var(--text-secondary, #666);
+  padding: 0.5rem 0;
+  line-height: 1.6;
+}
+
+.profile-field a {
+  color: var(--primary-color, #2ecc71);
+  text-decoration: none;
+}
+
+.profile-field a:hover {
+  text-decoration: underline;
+}
+
+/* Form Styling */
+.form-section {
+  padding: 1.5rem;
+  background: #f9f9f9;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+}
+
+.form-section h2 {
+  margin-top: 0;
+  color: var(--primary-color, #2ecc71);
+  font-size: 1.3rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  color: var(--text-primary, #333);
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-color, #2ecc71);
+  box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.1);
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.form-actions button {
+  min-width: 150px;
+}
+
+.volunteer-form {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 4px;
+  margin: 1.5rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.volunteer-form h3 {
+  margin-top: 0;
+  color: var(--primary-color, #2ecc71);
+}
+
+.form-info {
+  color: var(--text-secondary, #666);
+  font-style: italic;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ngo-page {
+    padding: 1rem;
+  }
+
+  .ngo-page h1 {
+    font-size: 1.3rem;
+  }
+
+  .dashboard-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .donation-header,
+  .pickup-header,
+  .volunteer-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+
+  .status-badge,
+  .approval-badge {
+    align-self: flex-start;
+  }
+
+  .donation-actions,
+  .pickup-actions,
+  .volunteer-actions {
+    flex-direction: column;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .form-actions button {
+    width: 100%;
+  }
+
+  .filter-controls,
+  .date-range-selector {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filter-controls select,
+  .date-range-selector select {
+    width: 100%;
+  }
+
+  .profile-container {
+    padding: 1rem;
+  }
+}
+
+/* NGO Donations Request Container */
+.ngo-donations-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: var(--bg-secondary, #f9f9f9);
+  min-height: calc(100vh - 200px);
+}
+
+.donations-header {
+  margin-bottom: 2rem;
+}
+
+.donations-header h1 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.donations-header .subtitle {
+  color: #666;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.donations-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.filter-group label {
+  color: #333;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.filter-select {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  color: #333;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.filter-select:hover {
+  border-color: #2ecc71;
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: #2ecc71;
+  box-shadow: 0 0 0 2px rgba(46, 204, 113, 0.1);
+}
+
+.refresh-btn {
+  background-color: #52c41a;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.refresh-btn:hover {
+  background-color: #45a717;
+}
+
+.donations-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.donation-request-card {
+  background: white;
+  border-radius: 8px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s;
+}
+
+.donation-request-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-left {
+  flex: 1;
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  position: relative;
+}
+
+.spoilage-risk-badge {
+  position: absolute;
+  top: 0.85rem;
+  left: 0.85rem;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.spoilage-risk-badge.loading {
+  background: #f8fafc;
+}
+
+.spoilage-risk-badge-icon {
+  font-size: 0.85rem;
+}
+
+.spoilage-risk-badge-text {
+  white-space: nowrap;
+}
+
+.donor-image {
+  flex-shrink: 0;
+}
+
+.donor-image img {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  object-fit: cover;
+  background: #f0f0f0;
+}
+
+.donation-info {
+  flex: 1;
+}
+
+.donor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 0.5rem;
+  gap: 1rem;
+}
+
+.donor-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.donation-time {
+  color: #999;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.quantity-badge {
+  display: inline-block;
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+  margin-top: 0;
+}
+
+.food-description {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+}
+
+.expiry-datetime {
+  color: #d32f2f;
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+  padding: 0.5rem;
+  background-color: #ffebee;
+  border-left: 3px solid #d32f2f;
+  border-radius: 3px;
+}
+
+.location-info {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.location-info p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.address {
+  color: #555;
+}
+
+.distance {
+  color: #2ecc71;
+  font-weight: 500;
+}
+
+.card-right {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 1.5rem;
+  border-left: 1px solid #f0f0f0;
+  gap: 1rem;
+}
+
+.spoilage-warning {
+  background: #fafafa;
+  padding: 1rem;
+  border-radius: 4px;
+  min-width: 280px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.warning-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.warning-icon {
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.warning-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.warning-level {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+}
+
+.warning-advice {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 0.75rem;
+  flex-direction: column;
+  width: 100%;
+}
+
+.btn {
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.btn-accept {
+  background-color: #52c41a;
+  color: white;
+}
+
+.btn-accept:hover {
+  background-color: #45a717;
+  transform: translateY(-2px);
+}
+
+/* Expiry Countdown Styles */
+.expiry-countdown {
+  background: #f5f5f5;
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin: 0.75rem 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.expiry-header {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.3rem;
+}
+
+.expiry-icon {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.expiry-level {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.expiry-time {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Delivery Tracking Styles */
+.btn-track {
+  background-color: #1890ff;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.btn-track:hover {
+  background-color: #0050b3;
+  transform: translateY(-2px);
+}
+
+.tracking-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  animation: slideIn 0.3s ease-out;
+  overflow: hidden;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tracking-header {
+  background: white;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #f0f0f0;
+  position: sticky;
+  top: 0;
+  z-index: 1001;
+}
+
+.tracking-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.btn-close {
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
+  padding: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  z-index: 1002;
+}
+
+.btn-close:hover {
+  background: #e0e0e0;
+  color: #333;
+}
+
+.tracking-content {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.delivery-map-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.map-wrapper {
+  flex: 1;
+  overflow: hidden;
+}
+
+.delivery-info {
+  background: white;
+  padding: 1.5rem;
+  border-top: 2px solid #f0f0f0;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.info-item .label {
+  font-size: 0.85rem;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.info-item .value {
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.status-in-transit {
+  color: #1890ff;
+  padding: 0.3rem 0.8rem;
+  background: #e6f7ff;
+  border-radius: 4px;
+  display: inline-block;
+  width: fit-content;
+}
+
+.marker-popup {
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.marker-popup h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+}
+
+.marker-popup p {
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.delivery-map-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  background: #f5f5f5;
+  border-radius: 8px;
+  margin: 1rem 0;
+  color: #999;
+}
+
+.btn-reject {
+  background-color: #ff4d4f;
+  color: white;
+}
+
+.btn-reject:hover {
+  background-color: #ff7875;
+  transform: translateY(-2px);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.pagination-btn {
+  border: 1px solid #ddd;
+  background-color: white;
+  color: #333;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  border-color: #2ecc71;
+  color: #2ecc71;
+}
+
+.pagination-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.page-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
+  min-width: 60px;
+  justify-content: center;
+}
+
+.page-divider {
+  color: #ddd;
+}
+
+.no-data {
+  text-align: center;
+  color: #999;
+  padding: 3rem 1rem;
+  font-size: 1rem;
+}
+
+.error-message {
+  background-color: #ffebee;
+  color: #c62828;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #c62828;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .donation-request-card {
+    flex-direction: column;
+  }
+
+  .card-left {
+    padding: 1.5rem;
+  }
+
+  .card-right {
+    padding: 1rem 1.5rem;
+    border-left: none;
+    border-top: 1px solid #f0f0f0;
+  }
+
+  .donor-header {
+    flex-direction: column;
+  }
+
+  .donations-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-select,
+  .refresh-btn {
+    width: 100%;
+  }
+
+  .location-info {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .action-buttons {
+    flex-direction: row;
+  }
+
+  .btn {
+    flex: 1;
+  }
+}
+
+/* Dark Mode Support */
+[data-theme="dark"] .ngo-page {
+  background: var(--dark-bg-secondary, #1e1e1e);
+}
+
+[data-theme="dark"] .stat-card,
+[data-theme="dark"] .donation-card,
+[data-theme="dark"] .pickup-card,
+[data-theme="dark"] .volunteer-card,
+[data-theme="dark"] .profile-container,
+[data-theme="dark"] .history-table-wrapper,
+[data-theme="dark"] .filter-controls,
+[data-theme="dark"] .date-range-selector,
+[data-theme="dark"] .volunteer-form {
+  background: var(--dark-bg-primary, #2d2d2d);
+  color: var(--dark-text-primary, #e0e0e0);
+}
+
+[data-theme="dark"] .profile-section,
+[data-theme="dark"] .form-section {
+  background: var(--dark-bg-tertiary, #3d3d3d);
+}
+
+[data-theme="dark"] .form-group input,
+[data-theme="dark"] .form-group textarea,
+[data-theme="dark"] .filter-controls select,
+[data-theme="dark"] .date-range-selector select {
+  background: var(--dark-bg-secondary, #1e1e1e);
+  color: var(--dark-text-primary, #e0e0e0);
+  border-color: var(--dark-border-color, #444);
+}
+
+[data-theme="dark"] .history-table thead {
+  background-color: var(--dark-bg-tertiary, #3d3d3d);
+}
+
+[data-theme="dark"] .history-table td {
+  border-bottom-color: var(--dark-border-color, #444);
+  color: var(--dark-text-primary, #e0e0e0);
+}
+
+[data-theme="dark"] .hsb-item,
+[data-theme="dark"] .dashboard-section,
+[data-theme="dark"] .dash-stat-card {
+  background: var(--dark-bg-primary, #2d2d2d);
+  color: var(--dark-text-primary, #e0e0e0);
+}
+
+[data-theme="dark"] .history-search-input {
+  background: var(--dark-bg-secondary, #1e1e1e);
+  color: var(--dark-text-primary, #e0e0e0);
+  border-color: var(--dark-border-color, #444);
+}
+
+[data-theme="dark"] .recent-item {
+  background: var(--dark-bg-tertiary, #3d3d3d);
+  color: var(--dark-text-secondary, #b0b0b0);
+}
+
+
+.food-icon-placeholder {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  background: #f0fdf4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+
+/* ===== Volunteer Management Enhancements ===== */
+.vol-success-msg {
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 0.65rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border-left: 3px solid #2e7d32;
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+/* Summary Bar */
+.vol-summary-bar {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.vol-stat {
+  background: white;
+  border-radius: 10px;
+  padding: 0.6rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  min-width: 75px;
+  border-top: 3px solid #95a5a6;
+}
+
+.vol-stat.active { border-top-color: #27ae60; }
+.vol-stat.inactive { border-top-color: #e67e22; }
+.vol-stat.assigned { border-top-color: #3498db; }
+
+.vol-stat-num {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary, #222);
+}
+
+.vol-stat-label {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary, #888);
+}
+
+/* Toolbar */
+.vol-toolbar {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.vol-search {
+  flex: 1;
+  min-width: 180px;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.vol-search:focus {
+  border-color: #27ae60;
+}
+
+.vol-filter-select {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  background: white;
+  cursor: pointer;
+}
+
+/* Invite Form */
+.vol-invite-form {
+  background: white;
+  border-radius: 12px;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  border-left: 3px solid #27ae60;
+}
+
+.vol-invite-form h3 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.05rem;
+  color: var(--text-primary, #333);
+}
+
+.vol-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.vol-form-full {
+  grid-column: 1 / -1;
+}
+
+.vol-form-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+/* Volunteer Card Enhancements */
+.volunteer-card.vol-inactive {
+  opacity: 0.65;
+  border-left-color: #bdc3c7;
+}
+
+.vol-name-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.vol-name-row h3 {
+  margin: 0;
+}
+
+.vol-badges {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.vol-duty-badge {
+  background: #e3f2fd;
+  color: #1565c0;
+  padding: 0.15rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+/* Status Toggle */
+.vol-status-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.73rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  user-select: none;
+}
+
+.vol-status-toggle.active {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.vol-status-toggle.inactive {
+  background: #fff3e0;
+  color: #e65100;
+}
+
+.vol-toggle-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.vol-status-toggle.active .vol-toggle-dot {
+  background: #2e7d32;
+}
+
+.vol-status-toggle.inactive .vol-toggle-dot {
+  background: #e65100;
+}
+
+/* Pickup Stats Row */
+.vol-pickup-stats {
+  display: flex;
+  gap: 1rem;
+  margin: 0.5rem 0;
+  padding: 0.4rem 0;
+  font-size: 0.8rem;
+  color: var(--text-secondary, #666);
+}
+
+/* Assign Pickup Modal */
+.vol-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.vol-modal {
+  background: white;
+  border-radius: 14px;
+  width: 90%;
+  max-width: 520px;
+  max-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.18);
+  animation: slideUp 0.25s ease-out;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.vol-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.vol-modal-header h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.vol-modal-body {
+  padding: 1rem 1.25rem;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.vol-pickup-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.vol-pickup-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+  gap: 0.75rem;
+}
+
+.vol-pickup-item:hover {
+  background: #f0fdf4;
+}
+
+.vol-pickup-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.vol-pickup-info strong {
+  font-size: 0.88rem;
+  color: var(--text-primary, #333);
+}
+
+.vol-pickup-qty {
+  font-size: 0.78rem;
+  color: #856404;
+  background: #fff3cd;
+  padding: 0.1rem 0.4rem;
+  border-radius: 8px;
+  display: inline-block;
+  width: fit-content;
+}
+
+.vol-pickup-addr {
+  font-size: 0.78rem;
+  color: var(--text-secondary, #888);
+}
+
+.vol-pickup-item .btn-accept {
+  flex: none;
+  padding: 0.35rem 0.8rem;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .vol-summary-bar {
+    justify-content: center;
+  }
+  .vol-toolbar {
+    flex-direction: column;
+  }
+  .vol-search { width: 100%; }
+  .vol-form-grid {
+    grid-template-columns: 1fr;
+  }
+  .vol-pickup-stats {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+}
+
+/* Dark mode for volunteer enhancements */
+[data-theme="dark"] .vol-success-msg {
+  background: #1b3a1b;
+  color: #81c784;
+  border-left-color: #4caf50;
+}
+
+[data-theme="dark"] .vol-stat,
+[data-theme="dark"] .vol-invite-form,
+[data-theme="dark"] .vol-modal {
+  background: var(--dark-bg-primary, #2d2d2d);
+  color: var(--dark-text-primary, #e0e0e0);
+}
+
+[data-theme="dark"] .vol-search,
+[data-theme="dark"] .vol-filter-select {
+  background: var(--dark-bg-secondary, #1e1e1e);
+  color: var(--dark-text-primary, #e0e0e0);
+  border-color: var(--dark-border-color, #444);
+}
+
+[data-theme="dark"] .vol-pickup-item {
+  background: var(--dark-bg-tertiary, #3d3d3d);
+}
+
+[data-theme="dark"] .vol-modal-header {
+  border-bottom-color: var(--dark-border-color, #444);
+}
+
+/* ===== NGO Dashboard Overview ===== */
+.ngo-dashboard-page {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: calc(100vh - 200px);
+}
+
+.dashboard-header-section h1 {
+  font-size: 2rem;
+  color: var(--text-primary, #333);
+  margin-bottom: 0.25rem;
+}
+
+.dashboard-header-section .subtitle {
+  color: var(--text-secondary, #666);
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+/* Stats Grid */
+.dashboard-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.dash-stat-card {
+  background: white;
+  border-radius: 14px;
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: default;
+}
+
+.dash-stat-card[class*="onClick"],
+.dash-stat-card.pending-card,
+.dash-stat-card.pickup-card,
+.dash-stat-card.expiry-card {
+  cursor: pointer;
+}
+
+.dash-stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.dash-stat-icon {
+  font-size: 2rem;
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.pending-card .dash-stat-icon { background: #fff3e0; }
+.assigned-card .dash-stat-icon { background: #e3f2fd; }
+.completed-card .dash-stat-icon { background: #e8f5e9; }
+.meals-card .dash-stat-icon { background: #fce4ec; }
+.pickup-card .dash-stat-icon { background: #f3e5f5; }
+.expiry-card .dash-stat-icon { background: #fff8e1; }
+
+.pending-card { border-left: 4px solid #f39c12; }
+.assigned-card { border-left: 4px solid #3498db; }
+.completed-card { border-left: 4px solid #27ae60; }
+.meals-card { border-left: 4px solid #e91e63; }
+.pickup-card { border-left: 4px solid #9c27b0; }
+.expiry-card { border-left: 4px solid #ff9800; }
+
+.dash-stat-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.dash-stat-number {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-primary, #222);
+  line-height: 1;
+}
+
+.dash-stat-label {
+  font-size: 0.8rem;
+  color: var(--text-secondary, #888);
+  margin-top: 0.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Dashboard Bottom Section */
+.dashboard-bottom {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 1.5rem;
+}
+
+.dashboard-section {
+  background: white;
+  border-radius: 14px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.dashboard-section h2 {
+  font-size: 1.15rem;
+  color: var(--text-primary, #333);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+/* Recent Donations List */
+.recent-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.recent-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 10px;
+  background: #fafafa;
+  transition: background 0.2s;
+}
+
+.recent-item:hover {
+  background: #f0f0f0;
+}
+
+.recent-item-icon {
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  background: #f0fdf4;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.recent-item-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.recent-item-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-primary, #333);
+}
+
+.recent-item-meta {
+  font-size: 0.75rem;
+  color: var(--text-secondary, #999);
+}
+
+.recent-item-status {
+  font-size: 0.7rem;
+  color: white;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.empty-text {
+  color: #aaa;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+/* Quick Actions */
+.quick-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.quick-action-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid #e8e8e8;
+  border-radius: 10px;
+  background: white;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: var(--text-primary, #333);
+  transition: all 0.2s;
+}
+
+.quick-action-btn:hover {
+  background: #f0fdf4;
+  border-color: #27ae60;
+}
+
+.qa-icon {
+  font-size: 1.1rem;
+}
+
+/* Summary */
+.dashboard-summary {
+  background: #f8fdf9;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.dashboard-summary h3 {
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary, #333);
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e8f5e9;
+  font-size: 0.85rem;
+}
+
+.summary-row:last-child {
+  border-bottom: none;
+}
+
+.summary-row span {
+  color: var(--text-secondary, #666);
+}
+
+.summary-row strong {
+  color: var(--text-primary, #333);
+  font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dashboard-bottom {
+    grid-template-columns: 1fr;
+  }
+
+  .ngo-dashboard-page {
+    padding: 1rem;
+  }
+}
