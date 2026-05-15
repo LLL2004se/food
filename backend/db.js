@@ -1,5 +1,8 @@
 const mongoose = require("mongoose");
+const dns = require("dns");
 require("dotenv").config();
+
+dns.setServers((process.env.DNS_SERVERS || "8.8.8.8,8.8.4.4").split(","));
 
 // Use MongoDB connection string from environment variable if provided,
 // otherwise fall back to a local MongoDB instance.
