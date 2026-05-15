@@ -9,8 +9,10 @@ dns.setServers((process.env.DNS_SERVERS || "8.8.8.8,8.8.4.4").split(","));
 const MONGODB_URI =
   process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/food_donation_db";
 
+console.log(`MongoDB URI configured: ${process.env.MONGODB_URI ? "yes" : "no, using local fallback"}`);
+
 mongoose
-  .connect(MONGODB_URI)
+  .connect(MONGODB_URI, { serverSelectionTimeoutMS: 10000 })
   .then(() => console.log("MongoDB connected"))
   .catch((err) => {
     console.error("MongoDB connection error:", err.message);
