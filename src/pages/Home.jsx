@@ -14,7 +14,7 @@ export default function Home({ onDirectDonate, onOpenRestaurant, onDonateMoney, 
 
     async function loadEvents() {
       try {
-        const res = await fetch("http://localhost:5000/api/events");
+        const res = await fetch("https://food-backend-d44t.onrender.com/api/events");
         if (!res.ok) throw new Error("Failed to load events");
         const contentType = res.headers.get("content-type") || "";
         if (!contentType.includes("application/json")) {
@@ -33,7 +33,7 @@ export default function Home({ onDirectDonate, onOpenRestaurant, onDonateMoney, 
     async function loadPastDonations() {
       setLoadingPastDonations(true);
       try {
-        const res = await fetch("http://localhost:5000/api/donations/recent-public");
+        const res = await fetch("https://food-backend-d44t.onrender.com/api/donations/recent-public");
         if (!res.ok) throw new Error("Failed to load past donations");
         const data = await res.json();
         if (!cancelled && Array.isArray(data)) {
@@ -57,7 +57,7 @@ export default function Home({ onDirectDonate, onOpenRestaurant, onDonateMoney, 
   async function loadRecentMoneyDonations() {
     setLoadingMoneyDonations(true);
     try {
-      const res = await fetch("http://localhost:5000/api/money-donations/recent-public");
+      const res = await fetch("https://food-backend-d44t.onrender.com/api/money-donations/recent-public");
       if (!res.ok) throw new Error("Failed to load money donations");
       const data = await res.json();
       if (Array.isArray(data)) setRecentMoneyDonations(data);

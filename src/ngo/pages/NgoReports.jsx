@@ -17,7 +17,7 @@ export default function NgoReports() {
     setLoading(true);
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch("http://localhost:5000/api/ngo/pickups", {
+      const res = await fetch("https://food-backend-d44t.onrender.com/api/ngo/pickups", {
         headers: { Authorization: `Bearer ${token}` }
       });
       const data = await res.json();

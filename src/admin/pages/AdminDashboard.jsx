@@ -30,7 +30,7 @@ export default function AdminDashboard({ setPage }) {
 
   useEffect(() => {
     const token = localStorage.getItem('token');
-    fetch('http://localhost:5000/api/admin/stats', {
+    fetch('https://food-backend-d44t.onrender.com/api/admin/stats', {
       headers: { 'Authorization': `Bearer ${token}` }
     })
        .then(async (res) => {
@@ -42,7 +42,7 @@ export default function AdminDashboard({ setPage }) {
            setInsightsLoading(true);
            setPredictionError(null);
            try {
-             const response = await fetch('http://localhost:5000/api/ai/predict-demand', {
+             const response = await fetch('https://food-backend-d44t.onrender.com/api/ai/predict-demand', {
                method: 'POST',
                headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` },
                body: JSON.stringify({

@@ -90,17 +90,17 @@ export default function Dashboard({ auth, onRequireLogin }) {
     const token = localStorage.getItem('token');
     const headers = token ? { 'Authorization': `Bearer ${token}` } : {};
 
-    fetch(`http://localhost:5000/api/user/donations?user_id=${userId}`, { headers })
+    fetch(`https://food-backend-d44t.onrender.com/api/user/donations?user_id=${userId}`, { headers })
        .then(res => res.json())
        .then(data => setDonations(Array.isArray(data) ? data : []))
        .catch(err => console.log("Error fetching donations:", err));
     
-    fetch(`http://localhost:5000/api/user/pickups?user_id=${userId}`, { headers })
+    fetch(`https://food-backend-d44t.onrender.com/api/user/pickups?user_id=${userId}`, { headers })
        .then(res => res.json())
        .then(data => setPickups(data))
        .catch(err => console.log("Error fetching pickups:", err));
     
-    fetch(`http://localhost:5000/api/user/requests?user_id=${userId}`, { headers })
+    fetch(`https://food-backend-d44t.onrender.com/api/user/requests?user_id=${userId}`, { headers })
        .then(res => res.json())
        .then(data => setRequests(data))
        .catch(err => console.log("Error fetching requests:", err));

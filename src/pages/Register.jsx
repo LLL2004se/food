@@ -90,7 +90,7 @@ export default function Register({ onRegister, onCancel }) {
         registrationData.volunteer_availability = volunteerAvailability;
       }
 
-      const res = await fetch("http://localhost:5000/api/auth/register", {
+      const res = await fetch("https://food-backend-d44t.onrender.com/api/auth/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(registrationData),
@@ -113,7 +113,7 @@ export default function Register({ onRegister, onCancel }) {
       }
 
       // For Donor and Volunteer, proceed with auto-login
-      const loginRes = await fetch("http://localhost:5000/api/auth/login", {
+      const loginRes = await fetch("https://food-backend-d44t.onrender.com/api/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: email.trim(), password }),

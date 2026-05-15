@@ -29,7 +29,7 @@ export default function NgoVolunteers() {
   async function fetchVolunteers() {
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:5000/api/ngo/volunteers", { headers });
+      const res = await fetch("https://food-backend-d44t.onrender.com/api/ngo/volunteers", { headers });
       const data = await res.json();
       if (Array.isArray(data)) {
         setVolunteers(data);
@@ -56,7 +56,7 @@ export default function NgoVolunteers() {
     setFormLoading(true);
     setFormError("");
     try {
-      const res = await fetch("http://localhost:5000/api/ngo/volunteers/invite", {
+      const res = await fetch("https://food-backend-d44t.onrender.com/api/ngo/volunteers/invite", {
         method: "POST",
         headers: { "Content-Type": "application/json", ...headers },
         body: JSON.stringify(formData),
@@ -82,7 +82,7 @@ export default function NgoVolunteers() {
   async function toggleStatus(id, currentStatus) {
     const newStatus = currentStatus === "active" ? "pending" : "active";
     try {
-      const res = await fetch(`http://localhost:5000/api/ngo/volunteers/${id}/status`, {
+      const res = await fetch(`https://food-backend-d44t.onrender.com/api/ngo/volunteers/${id}/status`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json", ...headers },
         body: JSON.stringify({ approval_status: newStatus }),
@@ -102,7 +102,7 @@ export default function NgoVolunteers() {
     setAssignModal(volunteer);
     setLoadingPickups(true);
     try {
-      const res = await fetch("http://localhost:5000/api/ngo/unassigned-pickups", { headers });
+      const res = await fetch("https://food-backend-d44t.onrender.com/api/ngo/unassigned-pickups", { headers });
       const data = await res.json();
       setUnassignedPickups(Array.isArray(data) ? data : []);
     } catch (err) {
@@ -114,7 +114,7 @@ export default function NgoVolunteers() {
 
   async function handleAssignPickup(volunteerId, pickupId) {
     try {
-      const res = await fetch(`http://localhost:5000/api/ngo/volunteers/${volunteerId}/assign`, {
+      const res = await fetch(`https://food-backend-d44t.onrender.com/api/ngo/volunteers/${volunteerId}/assign`, {
         method: "POST",
         headers: { "Content-Type": "application/json", ...headers },
         body: JSON.stringify({ pickup_id: pickupId }),

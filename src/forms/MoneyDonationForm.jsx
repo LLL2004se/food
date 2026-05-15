@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const API_BASE = "http://localhost:5000";
+const API_BASE = "https://food-backend-d44t.onrender.com";
 const RAZORPAY_KEY_ID = import.meta.env.VITE_RAZORPAY_KEY_ID || "rzp_test_SnBJoENu84eKZp";
 
 function loadRazorpayScript() {

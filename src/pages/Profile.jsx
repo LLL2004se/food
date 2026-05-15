@@ -78,7 +78,7 @@ export default function Profile({ auth, onRequireLogin }) {
     setLoading(true);
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch('http://localhost:5000/api/user/profile', {
+      const res = await fetch('https://food-backend-d44t.onrender.com/api/user/profile', {
         headers: { Authorization: `Bearer ${token}` }
       });
 
@@ -113,7 +113,7 @@ export default function Profile({ auth, onRequireLogin }) {
           : undefined
       };
 
-      const res = await fetch('http://localhost:5000/api/user/profile', {
+      const res = await fetch('https://food-backend-d44t.onrender.com/api/user/profile', {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',

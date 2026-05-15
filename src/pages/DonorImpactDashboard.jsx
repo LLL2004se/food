@@ -15,7 +15,7 @@ const DonorImpactDashboard = ({ auth }) => {
       setLoading(true);
       setError(null);
       const token = localStorage.getItem('token');
-      const response = await axios.get('http://localhost:5000/api/donor/impact-stats', {
+      const response = await axios.get('https://food-backend-d44t.onrender.com/api/donor/impact-stats', {
         headers: { Authorization: `Bearer ${token}` }
       });
       setImpact(response.data);

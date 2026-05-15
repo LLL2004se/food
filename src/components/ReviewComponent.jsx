@@ -39,7 +39,7 @@ const ReviewModal = ({
   reviewType = 'donor',
   recipientLabel = 'User',
   onSubmit,
-  apiBaseUrl = 'http://localhost:5000'
+  apiBaseUrl = 'https://food-backend-d44t.onrender.com'
 }) => {
   const [rating, setRating] = useState(5);
   const [comment, setComment] = useState('');

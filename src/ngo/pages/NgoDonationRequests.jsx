@@ -31,7 +31,7 @@ export default function NgoDonationRequests() {
     setLoading(true);
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch("http://localhost:5000/api/ngo/available-donations", {
+      const res = await fetch("https://food-backend-d44t.onrender.com/api/ngo/available-donations", {
         headers: { Authorization: `Bearer ${token}` }
       });
       const data = await res.json();
@@ -62,7 +62,7 @@ export default function NgoDonationRequests() {
   async function fetchNgoLocation() {
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch("http://localhost:5000/api/user/ngo-profile", {
+      const res = await fetch("https://food-backend-d44t.onrender.com/api/user/ngo-profile", {
         headers: { Authorization: `Bearer ${token}` }
       });
 
@@ -184,7 +184,7 @@ export default function NgoDonationRequests() {
         pending.map(async (donation) => {
           try {
             const distance = getDonationDistance(donation) ?? 0;
-            const response = await axios.post('http://localhost:5000/api/ai/predict-spoilage-with-expiry', {
+            const response = await axios.post('https://food-backend-d44t.onrender.com/api/ai/predict-spoilage-with-expiry', {
               food_type: getFoodTypeIndex(donation),
               distance,
               temperature: 25,
@@ -244,7 +244,7 @@ export default function NgoDonationRequests() {
     try {
       const token = localStorage.getItem("token");
       
-      const res = await fetch(`http://localhost:5000/api/donations/${donationId}`, {
+      const res = await fetch(`https://food-backend-d44t.onrender.com/api/donations/${donationId}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -298,7 +298,7 @@ export default function NgoDonationRequests() {
       const foodType = getFoodTypeIndex(donation);
 
       // Use new endpoint with expiry_time for accurate delivery time calculation
-      const response = await axios.post('http://localhost:5000/api/ai/predict-spoilage-with-expiry', {
+      const response = await axios.post('https://food-backend-d44t.onrender.com/api/ai/predict-spoilage-with-expiry', {
         food_type: foodType,
         distance: distance,
         temperature: temperature,
@@ -372,7 +372,7 @@ export default function NgoDonationRequests() {
     try {
       const token = localStorage.getItem("token");
       
-      const res = await fetch(`http://localhost:5000/api/donations/${donationId}`, {
+      const res = await fetch(`https://food-backend-d44t.onrender.com/api/donations/${donationId}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",

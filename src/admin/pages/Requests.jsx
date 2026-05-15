@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 
-const API = 'http://localhost:5000/api/admin';
+const API = 'https://food-backend-d44t.onrender.com/api/admin';
 const PAGE_SIZE = 7;
 
 export default function Requests() {

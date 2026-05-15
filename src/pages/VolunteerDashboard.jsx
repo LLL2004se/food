@@ -18,9 +18,9 @@ export default function VolunteerDashboard({ auth, setPage }) {
     setLoading(true);
     try {
       const [statsRes, activeRes, histRes] = await Promise.all([
-        fetch('http://localhost:5000/api/volunteer/dashboard-stats', { headers }),
-        fetch('http://localhost:5000/api/volunteer/my-pickups', { headers }),
-        fetch('http://localhost:5000/api/volunteer/delivery-history', { headers }),
+        fetch('https://food-backend-d44t.onrender.com/api/volunteer/dashboard-stats', { headers }),
+        fetch('https://food-backend-d44t.onrender.com/api/volunteer/my-pickups', { headers }),
+        fetch('https://food-backend-d44t.onrender.com/api/volunteer/delivery-history', { headers }),
       ]);
       const statsData = await statsRes.json();
       const active = await activeRes.json();

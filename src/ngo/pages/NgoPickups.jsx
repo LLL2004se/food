@@ -42,7 +42,7 @@ export default function NgoPickups() {
     setLoading(true);
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch("http://localhost:5000/api/ngo/pickups", {
+      const res = await fetch("https://food-backend-d44t.onrender.com/api/ngo/pickups", {
         headers: { Authorization: `Bearer ${token}` }
       });
       const data = await res.json();
@@ -66,7 +66,7 @@ export default function NgoPickups() {
     setTrackingLoading(true);
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch(`http://localhost:5000/api/pickup/${pickupId}/tracking`, {
+      const res = await fetch(`https://food-backend-d44t.onrender.com/api/pickup/${pickupId}/tracking`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       const data = await res.json();
@@ -157,7 +157,7 @@ export default function NgoPickups() {
     try {
       const token = localStorage.getItem("token");
       
-      const res = await fetch(`http://localhost:5000/api/pickups/${pickupId}`, {
+      const res = await fetch(`https://food-backend-d44t.onrender.com/api/pickups/${pickupId}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",

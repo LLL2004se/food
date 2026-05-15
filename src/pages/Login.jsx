@@ -20,7 +20,7 @@ export default function Login({ onLogin, onSwitchToRegister }) {
 
   async function loginWithBackend(emailValue, passwordValue, userType = "user") {
     try {
-      const res = await fetch("http://localhost:5000/api/auth/login", {
+      const res = await fetch("https://food-backend-d44t.onrender.com/api/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: emailValue.trim(), password: passwordValue, user_type: userType }),
@@ -55,7 +55,7 @@ export default function Login({ onLogin, onSwitchToRegister }) {
       setGoogleError("");
       setGoogleLoading(true);
 
-      const res = await fetch("http://localhost:5000/api/auth/google", {
+      const res = await fetch("https://food-backend-d44t.onrender.com/api/auth/google", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ credential }),

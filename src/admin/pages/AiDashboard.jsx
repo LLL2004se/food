@@ -28,7 +28,7 @@ export default function AiDashboard() {
       const token = localStorage.getItem('token');
       
       // Fetch admin stats
-      const statsRes = await fetch('http://localhost:5000/api/admin/stats', {
+      const statsRes = await fetch('https://food-backend-d44t.onrender.com/api/admin/stats', {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       if (!statsRes.ok) {
@@ -38,7 +38,7 @@ export default function AiDashboard() {
       setStats(statsData);
       
       // Fetch all donations for analysis
-      const donationsRes = await fetch('http://localhost:5000/api/admin/donations', {
+      const donationsRes = await fetch('https://food-backend-d44t.onrender.com/api/admin/donations', {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       if (!donationsRes.ok) {
@@ -47,7 +47,7 @@ export default function AiDashboard() {
       const donations = await donationsRes.json();
 
       // Fetch all requests for the comparison chart
-      const requestsRes = await fetch('http://localhost:5000/api/admin/requests', {
+      const requestsRes = await fetch('https://food-backend-d44t.onrender.com/api/admin/requests', {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       if (!requestsRes.ok) {
@@ -155,7 +155,7 @@ export default function AiDashboard() {
       
       // Fetch AI prediction for location demand
       try {
-        const predictionRes = await fetch('http://localhost:5000/api/ai/predict-demand', {
+        const predictionRes = await fetch('https://food-backend-d44t.onrender.com/api/ai/predict-demand', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({

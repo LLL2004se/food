@@ -138,7 +138,7 @@ export default function VolunteerDelivery({ auth, setPage }) {
 
   async function sendLocationToBackend(lat, lng) {
     try {
-      await fetch('http://localhost:5000/api/volunteer/location', {
+      await fetch('https://food-backend-d44t.onrender.com/api/volunteer/location', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', ...headers },
         body: JSON.stringify({ lat, lng })
@@ -150,9 +150,9 @@ export default function VolunteerDelivery({ auth, setPage }) {
     setLoading(true);
     try {
       const [pickupsRes, histRes, availableRes] = await Promise.all([
-        fetch('http://localhost:5000/api/volunteer/my-pickups', { headers }),
-        fetch('http://localhost:5000/api/volunteer/delivery-history', { headers }),
-        fetch('http://localhost:5000/api/volunteer/available-pickups', { headers }),
+        fetch('https://food-backend-d44t.onrender.com/api/volunteer/my-pickups', { headers }),
+        fetch('https://food-backend-d44t.onrender.com/api/volunteer/delivery-history', { headers }),
+        fetch('https://food-backend-d44t.onrender.com/api/volunteer/available-pickups', { headers }),
       ]);
       const pickups = await pickupsRes.json();
       const hist = await histRes.json();
@@ -172,8 +172,8 @@ export default function VolunteerDelivery({ auth, setPage }) {
     if (newStatus === "delivered" && !window.confirm("Mark this delivery as completed?")) return;
     try {
       const url = newStatus === "delivered"
-        ? `http://localhost:5000/api/volunteer/pickup/${pickupId}/deliver`
-        : `http://localhost:5000/api/pickups/${pickupId}`;
+        ? `https://food-backend-d44t.onrender.com/api/volunteer/pickup/${pickupId}/deliver`
+        : `https://food-backend-d44t.onrender.com/api/pickups/${pickupId}`;
       const res = await fetch(url, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json', ...headers },
@@ -192,7 +192,7 @@ export default function VolunteerDelivery({ auth, setPage }) {
 
   async function claimPickup(pickupId) {
     try {
-      const res = await fetch(`http://localhost:5000/api/volunteer/pickup/${pickupId}/claim`, {
+      const res = await fetch(`https://food-backend-d44t.onrender.com/api/volunteer/pickup/${pickupId}/claim`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json', ...headers },
       });
@@ -211,7 +211,7 @@ export default function VolunteerDelivery({ auth, setPage }) {
   async function rejectPickup(pickupId) {
     if (!window.confirm("Are you sure you want to reject this donation?")) return;
     try {
-      const res = await fetch(`http://localhost:5000/api/volunteer/pickup/${pickupId}/reject`, {
+      const res = await fetch(`https://food-backend-d44t.onrender.com/api/volunteer/pickup/${pickupId}/reject`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json', ...headers },
       });

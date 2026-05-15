@@ -68,7 +68,7 @@ export default function NgoProfile() {
     setLoading(true);
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch("http://localhost:5000/api/user/ngo-profile", {
+      const res = await fetch("https://food-backend-d44t.onrender.com/api/user/ngo-profile", {
         headers: { Authorization: `Bearer ${token}` }
       });
       
@@ -101,7 +101,7 @@ export default function NgoProfile() {
           ? locationCoords
           : undefined
       };
-      const res = await fetch("http://localhost:5000/api/user/ngo-profile", {
+      const res = await fetch("https://food-backend-d44t.onrender.com/api/user/ngo-profile", {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",

@@ -14,7 +14,7 @@ export default function NgoHome() {
     setLoading(true);
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch("http://localhost:5000/api/ngo/available-donations", {
+      const res = await fetch("https://food-backend-d44t.onrender.com/api/ngo/available-donations", {
         headers: { Authorization: `Bearer ${token}` }
       });
       const data = await res.json();
@@ -38,7 +38,7 @@ export default function NgoHome() {
       const token = localStorage.getItem("token");
       
       // Update donation status to assigned
-      const res = await fetch(`http://localhost:5000/api/donations/${donationId}`, {
+      const res = await fetch(`https://food-backend-d44t.onrender.com/api/donations/${donationId}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -65,7 +65,7 @@ export default function NgoHome() {
 
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch(`http://localhost:5000/api/donations/${donationId}`, {
+      const res = await fetch(`https://food-backend-d44t.onrender.com/api/donations/${donationId}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",

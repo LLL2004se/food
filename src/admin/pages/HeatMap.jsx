@@ -113,7 +113,7 @@ export default function HeatMap() {
       setLoading(true);
       setError(null);
       const token = localStorage.getItem('token');
-      const res = await fetch('http://localhost:5000/api/ai/heatmap-data', {
+      const res = await fetch('https://food-backend-d44t.onrender.com/api/ai/heatmap-data', {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       if (!res.ok) throw new Error('Failed to fetch heatmap data');
