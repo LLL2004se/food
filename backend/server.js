@@ -1269,7 +1269,7 @@ app.get("/api/pickup/:id/tracking", requireAuth, async (req, res) => {
 });
 
 // ===== AI Prediction Endpoints =====
-const AI_SERVER = "http://localhost:5001";
+const AI_SERVER = process.env.AI_SERVER_URL || "http://localhost:5001";
 
 function buildDemandFallback(donationCount, ngoRequests, month) {
   const donations = Number.isFinite(Number(donationCount)) ? Number(donationCount) : 0;
